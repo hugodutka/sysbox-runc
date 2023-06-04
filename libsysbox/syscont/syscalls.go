@@ -360,6 +360,9 @@ var syscontSyscallWhitelist = []string{
 	// allow namespace creation inside the system container (for nested containers)
 	"setns",
 	"unshare",
+
+	// required by rosetta on Apple Silicon
+	"getrlimit",
 }
 
 // List of syscalls with allowed argument restrictions (via seccomp)
